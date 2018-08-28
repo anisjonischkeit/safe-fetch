@@ -1,10 +1,14 @@
 {
   "name": "safe-fetch",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "This package adds runtime type checking to the response of your fetch to make sure that data retrieved from external sources matches your program's types",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:clean && npm run build:lib && npm run build:flow",
+    "build:clean": "rimraf lib",
+    "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
+    "build:flow": "flow-copy-source -v -i '**/__tests__/**' src lib"
   },
   "repository": {
     "type": "git",
@@ -24,5 +28,13 @@
   "homepage": "https://github.com/anisjonischkeit/safe-fetch#readme",
   "peerDependencies": {
     "decoders": "^1.8.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "flow-copy-source": "^2.0.2",
+    "rimraf": "^2.6.2"
   }
 }
