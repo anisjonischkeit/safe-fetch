@@ -1,0 +1,25 @@
+{
+  "name": "safe-fetch",
+  "version": "1.0.0",
+  "description": "This package adds runtime type checking to the response of your fetch to make sure that data retrieved from external sources matches your program's types",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anisjonischkeit/safe-fetch.git"
+  },
+  "keywords": [
+    "flow",
+    "fetch",
+    "decoder",
+    "elm"
+  ],
+  "author": "Anis Jonischkeit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anisjonischkeit/safe-fetch/issues"
+  },
+  "homepage": "https://github.com/anisjonischkeit/safe-fetch#readme"
+}
