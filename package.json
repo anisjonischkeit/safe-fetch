@@ -1,6 +1,6 @@
 {
-  "name": "safe-fetch",
-  "version": "0.1.0",
+  "name": "typed-fetch",
+  "version": "0.1.2",
   "description": "This package adds runtime type checking to the response of your fetch to make sure that data retrieved from external sources matches your program's types",
   "main": "lib/index.js",
   "scripts": {

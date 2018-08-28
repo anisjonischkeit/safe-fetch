@@ -3,7 +3,7 @@
 import { guard } from "decoders";
 import type { Decoder } from "decoders";
 
-function safeFetch<T>(
+export default function typedFetch<T>(
   input: string | Request,
   decoder: Decoder<T>,
   init?: RequestOptions
