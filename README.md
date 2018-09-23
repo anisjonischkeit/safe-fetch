@@ -13,12 +13,11 @@ const todosDecoder = object({ title: string });
 
 typedFetch("https://jsonplaceholder.typicode.com/todos/1", todosDecoder)
 .then(todos => {
-    // todos has the flow type {| title: string |} as specified by the decoder
+  // todos has the flow type {| title: string |} as specified by the decoder
 
-    const myTodos: { title: string } = todos; // passes a flow check
-    const myFoo: { foo: string } = todos; // fails a flow check
-  }
-)
+  const myTodos: { title: string } = todos; // passes a flow check
+  const myFoo: { foo: string } = todos; // fails a flow check
+})
 ```
 
 For more examples on how decoders work, [go to the decoders github page](https://github.com/nvie/decoders)
